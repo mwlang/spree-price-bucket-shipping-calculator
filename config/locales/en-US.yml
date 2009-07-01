@@ -1,0 +1,18 @@
+en-US:
+  activerecord: 
+    attributes: 
+      price_bucket_shipping_rate: 
+        price_floor: "Price floor"
+        price_ceiling: "Price ceiling"
+        shipping_rate: "Shipping rate"
+    models: 
+      price_bucket_shipping_rate: 
+        one: "Price Bucket Shipping Rate"
+        other: "Price Bucket Shipping Rates"    
+    errors:
+      models:
+        price_bucket_shipping_rate:
+          taken: "already exists for the specified Zone."
+  price_bucket_shipping_rates_description: Manage rates and associated Shipping Categories for use with the Price Bucket Shipping Rates Extension
+  new_price_bucket_shipping_rate: "New Price Bucket Shipping Rate"
+  editing: "Editing"

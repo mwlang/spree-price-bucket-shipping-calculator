@@ -1,0 +1,15 @@
+first_price_bucket_us:
+  zone: usa_shipping
+  price_floor: 0.00
+  price_ceiling: 15.00
+  shipping_rate: 2.50
+second_price_bucket_us:
+  zone: usa_shipping
+  price_floor: 15.01
+  price_ceiling: 35.00
+  shipping_rate: 5.50
+third_price_bucket_us:
+  zone: usa_shipping
+  price_floor: 35.01
+  price_ceiling: 9999.00
+  shipping_rate: 15.50

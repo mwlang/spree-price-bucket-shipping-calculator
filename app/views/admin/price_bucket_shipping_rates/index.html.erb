@@ -1,0 +1,44 @@
+<div class='toolbar'>
+	<ul class='actions'>
+		<li>
+			<%= button_link_to t("new_price_bucket_shipping_rate"), new_object_url, :icon => 'add'  %>
+		</li>
+	</ul>
+	<br class='clear' />
+</div>
+
+<h1><%= PriceBucketShippingRate.human_name(:count => 2) %></h1>
+<p>
+	Calculation of Shipping Rates is determined by order sub-totals.  To utilize this calculator, establish 
+	your shipping categories and shipping methods and then define your pricing buckets with no gaps between
+	each range. 
+</p>
+
+<table class="index">
+	<thead>
+		<tr>
+			<th><%= PriceBucketShippingRate.human_attribute_name("shipping_method")%></th>
+			<th><%= PriceBucketShippingRate.human_attribute_name("price_floor")%></th>
+			<th><%= PriceBucketShippingRate.human_attribute_name("price_ceiling")%></th>
+			<th><%= PriceBucketShippingRate.human_attribute_name("shipping_rate")%></th>
+			<th><%= t("action")%></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @price_bucket_shipping_rates.sort.each do |rate| %>
+		<tr>
+			<td><%=rate.shipping_method.name %></td>
+			<td><%=number_to_currency(rate.price_floor) %></td>
+			<td><%=number_to_currency(rate.price_ceiling) %></td>
+			<td><%=number_to_currency(rate.shipping_rate) %></td>
+			<td>
+				<%= link_to_edit rate %> &nbsp;
+				<%= link_to_delete rate %>
+			</td>
+		</tr>
+		<% end %>
+		<% if @price_bucket_shipping_rates.empty? %>
+		<tr><td colspan="5">None.</td></tr>
+		<% end %>
+	</tbody>
+</table>

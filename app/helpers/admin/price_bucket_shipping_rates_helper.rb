@@ -1,0 +1,2 @@
+module Admin::PriceBucketShippingRatesHelper
+end

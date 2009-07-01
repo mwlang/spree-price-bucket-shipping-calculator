@@ -1,0 +1,4 @@
+usa_price_bucket:
+  name: Price Bucket Rate (US)
+  zone: usa_shipping
+  shipping_calculator: Spree::PriceBucketShippingRate::Calculator
